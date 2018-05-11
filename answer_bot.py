@@ -61,7 +61,7 @@ def load_json():
 	global remove_words, sample_questions, negative_words
 	remove_words = json.loads(open("Data/settings.json").read())["remove_words"]
 	negative_words = json.loads(open("Data/settings.json").read())["negative_words"]
-	sample_questions = json.loads(open("Data/questions.json").read())
+	sample_questions = json.loads(open("Data/questions.json", encoding="utf8").read())
 
 # take screenshot of question 
 def screen_grab(to_save):
